@@ -111,11 +111,11 @@ class ViewLog extends Page
 
     protected static function shouldRegisterNavigation(): bool
     {
-        return auth()->user()->can('view_view_log');
+        return auth()->user()->can('page_ViewLog');
     }
 
     public function mount(): void
     {
-        abort_unless(auth()->user()->can('view_view_log'), 403);
+        abort_unless(auth()->user()->can('page_ViewLog'), 403);
     }
 }
